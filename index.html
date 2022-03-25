@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(https://st3.depositphotos.com/12889260/19283/v/950/depositphotos_192838340-stock-illustration-vector-illustration-of-streets-crossing.jpg);
+            display: flex;
+            margin: 50px;
+        }
+
+        .glav {
+            border: 2px solid wheat;
+            margin-top: 150px;
+            width: 75px;
+            height: 220px;
+            margin-left: 20px;
+            background-color: black;
+            border-radius: 10px;
+
+        }
+
+        .red {
+            border-radius: 50%;
+            margin: 12px;
+
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 0px 8px wheat;
+            background-color: rgb(226, 6, 6);
+        }
+
+
+        .yellow {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-radius: 50%;
+            margin: 12px;
+
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 0px 8px wheat;
+        }
+
+        .green {
+            background-color: rgb(15, 15, 15);
+            border-radius: 50%;
+
+            margin: 12px;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 0px 8px wheat;
+        }
+
+        .glav2 {
+            border: 2px solid wheat;
+            margin-top: 150px;
+            width: 75px;
+            height: 220px;
+            margin-left: 720px;
+            background-color: black;
+            border-radius: 10px;
+
+        }
+
+        .red2 {
+            border-radius: 50%;
+            margin: 12px;
+
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 0px 8px wheat;
+            background-color: rgb(10, 0, 0);
+        }
+
+
+        .yellow2 {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-radius: 50%;
+            margin: 12px;
+
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 0px 8px wheat;
+        }
+
+        .green2 {
+            background-color: rgb(12, 238, 12);
+            border-radius: 50%;
+
+            margin: 12px;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 0px 8px wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glav">
+        <div class="red" id="red"></div>
+        <div class="yellow" id="yellow">15</div>
+        <div class="green" id="green"></div>
+    </div>
+
+    <div class="glav2">
+        <div class="red2" id="red2"></div>
+        <div class="yellow2" id="yellow2">15</div>
+        <div class="green2" id="green2"></div>
+    </div>
+    <script>
+        const red = document.getElementById('red')
+        const green = document.getElementById('green')
+        let s = 15;
+        function f() {
+            document.body.children[0].children[1].innerHTML = s -= 1;
+            if (s == 0) {
+                s = 15;
+                if (red.style.backgroundColor == "red") {
+                    red.style.backgroundColor = "black"
+                    green.style.backgroundColor = "green"
+                } else {
+                    red.style.backgroundColor = "red"
+                    green.style.backgroundColor = "black"
+                }
+            }
+        }
+        setInterval(f, 300);
+
+        const red2 = document.getElementById('red2')
+        const green2 = document.getElementById('green2')
+        let s2 = 15;
+        function f2() {
+            document.body.children[1].children[1].innerHTML = s2 -= 1;
+            if (s2 == 0) {
+                s2 = 15;
+                if (green2.style.backgroundColor == "green") {
+                    green2.style.backgroundColor = "black"
+                    red2.style.backgroundColor = "red"
+                } else {
+                    green2.style.backgroundColor = "green"
+                    red2.style.backgroundColor = "black"
+                }
+            }
+        }
+        setInterval(f2, 300);
+    </script>
+</body>
+
+</html>
